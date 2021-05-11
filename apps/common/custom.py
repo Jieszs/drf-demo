@@ -5,7 +5,7 @@ from rest_framework.generics import ListAPIView
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.views import exception_handler
 
-from musics.basic import GlobalResponse
+from apps.common.basic import GlobalResponse
 
 error_logger = logging.getLogger('error')
 info_logger = logging.getLogger('info')

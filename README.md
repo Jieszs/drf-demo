@@ -4,6 +4,7 @@ pip install django-filter
 pip install django-cors-headers
 pip install djangorestframework
 pip install django
+pip install djangorestframework-jwt
 
 ```
 
@@ -14,6 +15,7 @@ pip install django
 4. 原生sql查询与修改更新
 5. 异常统一处理
 6. 查询条件的筛选
+7. 简单jwt接口权限
 #### 后端：
 ```
 django 3.2.2

@@ -1,19 +1,28 @@
 # Create your views here.
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework.decorators import action, api_view
+from rest_framework.decorators import action
 from rest_framework.filters import SearchFilter, OrderingFilter
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
-from common.custom import CommonPagination
-from musics.models import Music, fun_raw_sql_query, fun_sql_cursor_update
-from musics.serializers import MusicSerializer
+
 
 from rest_framework import viewsets, status
 
 
 # Create your views here.
+from rest_framework_jwt.authentication import JSONWebTokenAuthentication
+
+from apps.common.custom import CommonPagination
+from apps.musics.models import Music, fun_raw_sql_query, fun_sql_cursor_update
+from apps.musics.serializers import MusicSerializer
+
+
 class MusicViewSet(viewsets.ModelViewSet):
     queryset = Music.objects.all()
+    authentication_classes = [JSONWebTokenAuthentication,]
+    permission_classes = [IsAuthenticated,]   # 内置权限类
+
     serializer_class = MusicSerializer  # 序列器
     pagination_class = CommonPagination  # 分页
     filter_backends = (DjangoFilterBackend, SearchFilter, OrderingFilter)

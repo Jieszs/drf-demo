@@ -4,6 +4,8 @@ from django.db import models, connection
 
 
 # Create your models here.
+
+
 class Music(models.Model):
     song = models.TextField()
     singer = models.TextField()
@@ -12,6 +14,7 @@ class Music(models.Model):
 
     class Meta:
         db_table = "music"
+
 
 # 原生查询
 def fun_raw_sql_query(**kwargs):
@@ -28,6 +31,7 @@ def namedtuplefetchall(cursor):
     desc = cursor.description
     nt_result = namedtuple('Result', [col[0] for col in desc])
     return [nt_result(*row) for row in cursor.fetchall()]
+
 
 # 复杂的增删改查
 def fun_sql_cursor_update(**kwargs):
@@ -53,5 +57,4 @@ def fun_sql_cursor_update(**kwargs):
         }
         for r in result
     ]
-
     return result

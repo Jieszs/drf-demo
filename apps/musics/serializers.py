@@ -1,6 +1,8 @@
 from django.utils.timezone import now
 from rest_framework import serializers
-from musics.models import Music
+
+from apps.musics.models import Music
+
 
 class ToUpperCaseCharField(serializers.CharField):
     def to_representation(self, value):
