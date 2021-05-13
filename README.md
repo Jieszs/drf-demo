@@ -16,6 +16,7 @@ pip install djangorestframework-jwt
 5. 异常统一处理
 6. 查询条件的筛选
 7. 简单jwt接口权限
+8. swagger
 #### 后端：
 ```
 django 3.2.2
