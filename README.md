@@ -16,7 +16,12 @@ pip install djangorestframework-jwt
 5. 异常统一处理
 6. 查询条件的筛选
 7. 简单jwt接口权限
-8. swagger
+8. swagger  
+```
+http://127.0.0.1:8000/swagger/
+swagger地址
+```
+
 #### 后端：
 ```
 django 3.2.2
@@ -65,4 +70,6 @@ python manage.py migrate
 ```
 参考项目地址：
 https://github.com/twtrubiks/django-rest-framework-tutorial
-https://github.com/xufqing/rest_xops
+https://github.com/xufqing/rest_xops  
+https://kuangshp1.gitbooks.io/django-book/content/chapter10/7.html  
+参数校验

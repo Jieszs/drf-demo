@@ -20,8 +20,8 @@ from apps.musics.serializers import MusicSerializer
 
 class MusicViewSet(viewsets.ModelViewSet):
     queryset = Music.objects.all()
-    authentication_classes = [JSONWebTokenAuthentication,]
-    permission_classes = [IsAuthenticated,]   # 内置权限类
+    # authentication_classes = [JSONWebTokenAuthentication,]
+    # permission_classes = [IsAuthenticated,]   # 内置权限类
 
     serializer_class = MusicSerializer  # 序列器
     pagination_class = CommonPagination  # 分页
