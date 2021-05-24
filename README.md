@@ -73,3 +73,11 @@ https://github.com/twtrubiks/django-rest-framework-tutorial
 https://github.com/xufqing/rest_xops  
 https://kuangshp1.gitbooks.io/django-book/content/chapter10/7.html  
 参数校验
+
+### 打包与部署
+https://www.cnblogs.com/wswang/p/5521566.html  
+使用uWSGI部署django项目
+https://kuangshp1.gitbooks.io/django-book/content/chapter12/3.html  
+项目准备及项目发布
+https://kuangshp1.gitbooks.io/django-book/content/chapter12/4.html  
+使用PM2+nginx部署项目
